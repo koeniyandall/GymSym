@@ -38,9 +38,13 @@ const Stats = () => {
         const calories = currUser.goal === "L" ? TDEE - 500 : TDEE + 500;
     
         // Macro calculations
-        const protein = Math.round(2 * currUser.weight); // Protein: 2g/kg
-        const fat = Math.round(0.9 * currUser.weight);   // Fat: 0.9g/kg
-        const carbs = Math.round((calories - (protein * 4 + fat * 9)) / 4); // Remaining calories for carbs
+        const proteinCalories = 0.25 * calories; // 25% of total calories
+        const fatCalories = 0.25 * calories;     // 25% of total calories
+        const carbsCalories = calories - (proteinCalories + fatCalories); // Remaining calories for carbs
+    
+        const protein = Math.round(proteinCalories / 4); // 4 calories per gram of protein
+        const fat = Math.round(fatCalories / 9);         // 9 calories per gram of fat
+        const carbs = Math.round(carbsCalories / 4);     // 4 calories per gram of carbs
     
         // Ensure values are realistic
         const adjustedCalories = protein * 4 + fat * 9 + carbs * 4;

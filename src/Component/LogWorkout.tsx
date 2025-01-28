@@ -45,6 +45,7 @@ const LogWorkout: React.FC = () => {
 
     return (
         <>
+        <div className = "app">
             <h1>Log Workout</h1>
 
             {/* Display Past Workouts */}
@@ -64,6 +65,8 @@ const LogWorkout: React.FC = () => {
             )}
 
             {/* Add New Workout Form */}
+            <div className = "app-body">
+            <div className="app-body-main-content">
             <h2>Add Workout</h2>
             <input
                 id="type"
@@ -71,26 +74,33 @@ const LogWorkout: React.FC = () => {
                 placeholder="Workout Type (e.g., Cardio)"
                 value={currentWorkout.type}
                 onChange={handleWorkoutChange}
+                className="input-white-text"
             />
+            <h2>Date</h2>
             <input
                 id="date"
                 type="date"
                 value={currentWorkout.date}
                 onChange={handleWorkoutChange}
+                className="input-white-text"
             />
+            <h2>Duration</h2>
             <input
                 id="duration"
                 type="number"
                 placeholder="Duration (mins)"
                 value={currentWorkout.duration}
                 onChange={handleWorkoutChange}
+                className="input-white-text"
             />
+            <h2>Calories Burned</h2>
             <input
                 id="caloriesBurned"
                 type="number"
                 placeholder="Calories Burned"
                 value={currentWorkout.caloriesBurned}
                 onChange={handleWorkoutChange}
+                className="input-white-text"
             />
             <textarea
                 id="notes"
@@ -99,6 +109,9 @@ const LogWorkout: React.FC = () => {
                 onChange={handleWorkoutChange}
             ></textarea>
             <button onClick={handleAddWorkout}>Add Workout</button>
+            </div>
+            </div>
+            </div>
         </>
     );
 };

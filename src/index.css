@@ -176,6 +176,10 @@ a {
 	color: inherit;
 }
 
+.input-white-text {
+    color: white;
+}
+
 .responsive-wrapper {
 	width: 90%;
 	max-width: 1600px;
