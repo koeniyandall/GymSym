@@ -52,7 +52,7 @@ return( <>
 <div className="background">
         <div className="shape"></div>
         <div className="shape"></div>
-    </div>
+</div>
     <form onSubmit = {handleFormSubmit}>
         <h1>GymSym</h1>
         <h3>Login Here</h3>

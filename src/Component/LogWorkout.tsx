@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { deleteActiveUser, getActiveUser, IUserModel, IWorkout, updateActiveUser } from "../LocalStorage";
+import { deleteActiveUser, getActiveUser, IUserModel, IWorkout, updateActiveUser, updateRegisteredUsers } from "../LocalStorage";
 
 const LogWorkout: React.FC = () => {
     const currUser = getActiveUser();
@@ -27,6 +27,7 @@ const LogWorkout: React.FC = () => {
             ...prev,
             [id]: id === "duration" || id === "caloriesBurned" ? parseInt(value, 10) || 0 : value,
         }));
+        updateRegisteredUsers(data);
     };
 
     // Add a new workout
@@ -37,6 +38,7 @@ const LogWorkout: React.FC = () => {
                 workouts: [...prevState.workouts, currentWorkout],
             };
             updateActiveUser(updatedUser); // Update localStorage
+            console.log("Updated User:", updatedUser); // Debugging
             return updatedUser;
         });
 
@@ -52,7 +54,8 @@ const LogWorkout: React.FC = () => {
     };
 
     return (
-        <> <div className="app">
+        <>
+        <div className="app">
         <header className="app-header">
             <div className="app-header-logo">
                 <div className="logo">
@@ -91,7 +94,6 @@ const LogWorkout: React.FC = () => {
                     </a>
                     </div>
             </div>
-    
         </header>
         <div className="app-body">
             <div className="app-body-navigation">
