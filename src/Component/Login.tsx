@@ -30,7 +30,7 @@ const Login = () => {
         try {
             console.log("Setting active user:", user); // Debugging
             updateActiveUser(user);
-            navigate("/");
+            navigate("/home");
         } catch (error) {
             console.error("Failed to update active user:", error);
             alert("An error occurred while logging in. Please try again.");
