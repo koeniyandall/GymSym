@@ -1097,3 +1097,30 @@ button {
     transform: scale(1.05);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
+
+.cool-textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 150px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cool-textarea:focus {
+    border-color: #007BFF;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+.cool-textarea:hover {
+    border-color: #007BFF;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}

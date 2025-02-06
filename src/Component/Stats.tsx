@@ -1,10 +1,6 @@
-//import { getActiveUser } from "../LocalStorage";
-
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { deleteActiveUser, getActiveUser } from "../LocalStorage";
-
 const Stats = () => {
     const currUser = getActiveUser();
     const [proteinGoal,setProteinGoal] = useState("")
