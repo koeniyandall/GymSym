@@ -75,7 +75,7 @@ const Stats = () => {
 				<a href="/logworkout" >
 					Log a Workout
 				</a>
-				<a href="#" className="active">
+				<a href="/records">
 					Payments
 				</a>
 				<a href="#">

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { addNewUser, isUserAlreadyRegistered, IUserModel } from "../LocalStorage";
 
 const Register = () => {
-    const[data,setData] = useState<IUserModel>({name: "", username: "", password: "", height: 0, weight: 0, age: 0,gender: "", goal: "", workouts: []});
+    const[data,setData] = useState<IUserModel>({name: "", username: "", password: "", height: 0, weight: 0, age: 0,gender: "", goal: "",benchPR: 0, squatPR: 0, deadliftPR: 0, workouts: []});
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const id = event.target.id;
         const value = event.target.value;

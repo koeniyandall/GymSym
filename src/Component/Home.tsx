@@ -14,6 +14,9 @@ const Home = () => {
     age: 0,
     name: "",
     goal: "",
+    benchPR: 0,
+    squatPR: 0,
+    deadliftPR: 0,
     workouts : []
   });
 

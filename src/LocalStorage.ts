@@ -10,6 +10,9 @@ export interface IUserModel {
     age: number;
     gender: string;
     goal: string;
+    benchPR: number;
+    squatPR: number;
+    deadliftPR: number;
     workouts: IWorkout[];
 }
 export interface IWorkout {
@@ -84,6 +87,9 @@ const updateRegisteredUsers = (updatedUser: IUserModel) => {
         user.weight = updatedUser.weight
         user.height = updatedUser.height
         user.gender = updatedUser.gender
+        user.benchPR = updatedUser.benchPR
+        user.squatPR = updatedUser.squatPR
+        user.deadliftPR = updatedUser.deadliftPR
         user.workouts = updatedUser.workouts
         localStorage.setItem(REGISTERED_USERS, JSON.stringify(users));
         
