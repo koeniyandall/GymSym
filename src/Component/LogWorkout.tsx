@@ -77,7 +77,7 @@ const LogWorkout: React.FC = () => {
                     <a href="/stats" >
                         Stats
                     </a>
-                    <a href="#" className="active">
+                    <a href="/records">
                         Payments
                     </a>
                     <a href="#">
