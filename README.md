@@ -1,4 +1,4 @@
-# GymSym
+# GymSym (https://gym-sym.vercel.app/login)
 
 ## Description
 GymSym is a website used to aid the user in their fitness journey. It calculates the optimal macronutrients based on physical stats, Allows the user to log workouts based on workout type, duration, calories burned, as well as allows the user to add notes.
